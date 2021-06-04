@@ -115,6 +115,36 @@ namespace Slutprojekt
 
                 System.Console.WriteLine("--------------------------------------------------------------------------------------------------------------------\n");
 
+                System.Console.WriteLine("I continue walking down into the deep woods.");
+                System.Console.WriteLine("When I can't see the plane anymore I see the ocean laying in front of me.");
+                System.Console.WriteLine("I walk on what seems to be a path and feel my stomache rumbling. About 5 metres to the right in front of me, I see a bush.");
+                System.Console.WriteLine("The bush contains 10 berries. I decide to try one, but which one?");
+
+
+                bool berry = false;
+                int quantity = 0;
+
+                while (!berry || quantity < 1 || quantity > 10)
+                {
+                    System.Console.WriteLine("(Pick a number between 1 and 10.)");
+                    berry = int.TryParse(Console.ReadLine(), out quantity);
+                    if (!berry)
+                        Console.WriteLine("Please choose an integer between 1-10.");
+
+                    else if (quantity < 1 || quantity > 10)
+                    {
+                        Console.WriteLine("Your berry doesn't exist! Please choose one between 1-10.");
+                    }
+                }
+
+                Console.WriteLine("you chose the " + quantity + " berry.");
+
+                Console.ReadLine();
+
+
+
+
+
             }
 
         }
